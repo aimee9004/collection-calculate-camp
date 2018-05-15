@@ -4,7 +4,7 @@ function average_to_letter(collection) {
   let avg = collection.reduce((acc, cur) => {
     return acc + cur
   })
-  return getAlphabet(Math.ceil(avg/2))
+  return getAlphabet(Math.ceil(avg/collection.length))
   //在这里写入代码
 }
 
