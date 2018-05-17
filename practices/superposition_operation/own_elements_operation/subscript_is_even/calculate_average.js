@@ -1,12 +1,8 @@
 'use strict';
 var calculate_average = function(collection){
-    // let len = 0
-    // let arr = collection.reduce((acc, cur, index) => {
-    //     if((index + 1) % 2 === 0) {
-    //         len++
-    //         return acc + cur
-    //     }
-    // }, 0)
-    // return arr/len
+    let arr =  collection.filter((v, index) => {
+        return index % 2 !== 0
+    })
+    return arr.reduce((acc, cur) => { return acc+cur}, 0)/arr.length
 };
 module.exports = calculate_average;
