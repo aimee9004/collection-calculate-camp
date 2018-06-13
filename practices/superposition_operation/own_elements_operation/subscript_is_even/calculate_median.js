@@ -4,12 +4,7 @@ var calculate_median = function(collection){
 };
 // 获取第偶数个元素数组
 function getEvenArr(arr) {
-    return arr.reduce((acc, cur, index) => {
-        if((index+1) % 2 === 0) {
-            acc.push(cur)
-        }
-        return acc
-    }, [])
+    return arr.filter((v, idx) => idx % 2 !== 0)
 } 
 // 获取中位数
 function getMiddleNum(arr) {
